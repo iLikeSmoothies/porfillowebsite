@@ -15,7 +15,7 @@ Static portfolio website for a mechanical engineering student. The site is inten
 - Resume: replace `assets/resume/resume.pdf`.
 - Certification PDFs: add files to `assets/certifications/`, then manually add links in `certifications.html`.
 - Project files: add files to `assets/projects/`, then manually add project sections in `projects.html`.
-- Profile photo: add `assets/images/profile/profile.jpg`.
+- Profile photo: replace `assets/images/profile/profile.png`.
 
 ## Contact Info
 

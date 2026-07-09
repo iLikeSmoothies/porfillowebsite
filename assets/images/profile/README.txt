@@ -1,6 +1,6 @@
 Put your profile photo here.
 
-The About page looks for this exact file:
-profile.jpg
+The About page currently uses:
+profile.png
 
-If profile.jpg is missing, the page hides the photo area cleanly.
+Replace profile.png when updating the photo.

@@ -24,7 +24,7 @@ Assets:
 - `assets/resume/resume.pdf`
 - `assets/certifications/`
 - `assets/projects/`
-- `assets/images/profile/profile.jpg`
+- `assets/images/profile/profile.png`
 
 ## Rules
 

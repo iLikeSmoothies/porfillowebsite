@@ -34,13 +34,11 @@ Then edit `projects.html` by hand. A reusable future project template is include
 
 ## Profile Photo
 
-Add a profile photo here:
+Replace the profile photo here:
 
 ```text
-assets/images/profile/profile.jpg
+assets/images/profile/profile.png
 ```
-
-If the image is missing, the About page shows a clean fallback panel instead of a broken image.
 
 ## Page Map
 

@@ -1,3 +1,6 @@
-Put certification PDFs here.
+Certification files used by certifications.html:
 
-After adding a PDF, manually link it from certifications.html.
+- cswa.pdf
+- autodesk-autocad-certified-user.png
+
+Add future certificate PDFs or badge images here, then manually link them from certifications.html.
