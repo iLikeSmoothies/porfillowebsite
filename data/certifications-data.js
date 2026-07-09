@@ -1,41 +1,36 @@
 /* ============================================================
-   Renders certification cards on certifications.html.
+   Renders certification cards on certifications.html and the
+   preview grid on index.html.
 
-   HOW TO ADD A CERTIFICATION
-   ---------------------------
-   Add an object below. "status" can be "earned", "progress",
-   or "planned". "credentialUrl" and "fileUrl" are optional —
-   leave as null if you don't have a link or PDF for it yet.
+   HOW TO UPDATE
+   -------------
+   - Set "status" to "earned", "progress", or "planned" as you
+     move through each certification.
+   - Set "credentialUrl" to the certificate's official verification
+     link once issued (e.g. a Certiport or Credly URL).
+   - Set "fileUrl" to a path to your certificate PDF once you have
+     one, e.g. "assets/certifications/cswa-mechanical-design.pdf"
+     (create the assets/certifications/ folder when you add a file).
    ============================================================ */
 
 const CERTIFICATIONS = [
   {
-    title: "[Certification Name Placeholder]",
-    issuer: "[Issuing Organization]",
-    status: "earned", // "earned" | "progress" | "planned"
-    date: "20XX",
+    title: "CSWA — Mechanical Design",
+    issuer: "SOLIDWORKS (Dassault Systèmes)",
+    status: "planned", // update to "progress" or "earned" as you move through it
+    date: "[Add date once earned]",
     description:
-      "Short description of what this certification covers and why it's relevant to your engineering work.",
+      "Certified SOLIDWORKS Associate — Mechanical Design. Validates core skills in parametric part and assembly modeling, drawings, and mechanical design fundamentals.",
     credentialUrl: null,
     fileUrl: null,
   },
   {
-    title: "[Certification In Progress]",
-    issuer: "[Issuing Organization]",
-    status: "progress",
-    date: "Expected 20XX",
+    title: "Autodesk AutoCAD Certified User",
+    issuer: "Autodesk / Certiport",
+    status: "planned", // update to "progress" or "earned" as you move through it
+    date: "[Add date once earned]",
     description:
-      "Replace with a certification you're currently pursuing, such as a CAD certification, safety training, or a robotics/controls course.",
-    credentialUrl: null,
-    fileUrl: null,
-  },
-  {
-    title: "[Planned Certification]",
-    issuer: "[Issuing Organization]",
-    status: "planned",
-    date: "Planned",
-    description:
-      "A certification you intend to pursue in the future. Update the status to \"progress\" or \"earned\" as you move through it.",
+      "Autodesk Certified User: AutoCAD. Validates fundamental skills in 2D drafting, drawing setup, and CAD documentation using AutoCAD.",
     credentialUrl: null,
     fileUrl: null,
   },
