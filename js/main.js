@@ -10,23 +10,33 @@
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
   if (toggle && links) {
+    const backdrop = document.createElement("button");
+    backdrop.className = "nav-backdrop";
+    backdrop.type = "button";
+    backdrop.setAttribute("aria-label", "Close navigation menu");
+    document.body.appendChild(backdrop);
+
     const setMobileMenuTop = () => {
       const header = document.querySelector(".site-header");
       if (header) document.documentElement.style.setProperty("--nav-menu-top", `${header.offsetHeight}px`);
     };
+    const closeMenu = () => {
+      links.classList.remove("open");
+      backdrop.classList.remove("open");
+      document.body.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    };
     toggle.addEventListener("click", () => {
       setMobileMenuTop();
       const open = links.classList.toggle("open");
+      backdrop.classList.toggle("open", open);
       document.body.classList.toggle("nav-open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
+    backdrop.addEventListener("click", closeMenu);
     window.addEventListener("resize", setMobileMenuTop, { passive: true });
     links.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => {
-        links.classList.remove("open");
-        document.body.classList.remove("nav-open");
-        toggle.setAttribute("aria-expanded", "false");
-      })
+      a.addEventListener("click", closeMenu)
     );
   }
 
