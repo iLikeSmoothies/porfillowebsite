@@ -59,27 +59,4 @@
     document.addEventListener("scroll", update, { passive: true });
     update();
   }
-
-  /* Netlify form AJAX submission (progressive enhancement) */
-  const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const data = new FormData(contactForm);
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data).toString(),
-      })
-        .then(() => {
-          contactForm.style.display = "none";
-          const success = document.querySelector(".form-success");
-          if (success) success.classList.add("show");
-        })
-        .catch(() => {
-          contactForm.querySelector(".form-note").textContent =
-            "Something went wrong sending this. Please email me directly instead.";
-        });
-    });
-  }
 })();

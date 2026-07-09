@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>[Your Name] — Mechanical Engineering Portfolio</title>
-  <meta name="description" content="Mechanical engineering student portfolio — product design, CAD, robotics, and engineering projects." />
+  <title>Darnel Williams — Mechanical Engineering Portfolio</title>
+  <meta name="description" content="Darnel Williams — Mechanical Engineering Portfolio. CAD, robotics, and hands-on design work, engineering drawings, and certifications." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -15,16 +15,16 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="nav-mark">[LASTNAME]<span class="dot">.</span>ME</a>
+      <a href="index.html" class="nav-brand">
+        <span class="nav-mark">Darnel<span class="dot">.</span>Williams</span>
+        <span class="nav-subtitle">Mechanical Engineering Portfolio</span>
+      </a>
       <nav class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
         <a href="drawings.html">Drawings</a>
         <a href="certifications.html">Certifications</a>
         <a href="resume.html">Resume</a>
-        <a href="blog.html">Research</a>
-        <a href="contact.html">Contact</a>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M1 4H17M1 9H17M1 14H17" stroke="currentColor" stroke-width="1.5"/></svg>
@@ -33,51 +33,44 @@
   </header>
 
   <main>
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO — short intro ============ -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
           <span class="eyebrow reveal">Mechanical Engineering Portfolio</span>
-          <h1 class="hero-name reveal reveal-delay-1">[Your<br />Full Name]</h1>
-          <p class="hero-role reveal reveal-delay-2">Mechanical Engineering Student</p>
+          <h1 class="hero-name reveal reveal-delay-1">Darnel<br />Williams</h1>
+          <p class="hero-role reveal reveal-delay-2">[Your Title — e.g. Mechanical Engineering Student]</p>
           <p class="hero-desc reveal reveal-delay-2">
             Replace this paragraph with a short, specific introduction — what you're
-            studying, what kind of engineer you want to be, and what draws you to
+            studying or working on, what kind of engineer you want to be, and what draws you to
             mechanical design. Keep it concrete and in your own voice.
           </p>
-          <div class="hero-interests reveal reveal-delay-3">
-            <span class="chip">Product Design</span>
-            <span class="chip">CAD</span>
-            <span class="chip">Robotics</span>
-            <span class="chip">Engineering Design</span>
-          </div>
           <div class="hero-actions reveal reveal-delay-3">
-            <a href="projects.html" class="btn btn-primary">View Projects <span class="btn-arrow">&rarr;</span></a>
-            <a href="resume.html" class="btn">Resume</a>
+            <a href="resume.html" class="btn btn-primary">View Resume <span class="btn-arrow">&rarr;</span></a>
+            <a href="#contact" class="btn">Get In Touch</a>
           </div>
         </div>
         <div class="hero-meta reveal reveal-delay-4">
-          <div><strong>Based in</strong>[City, State — Placeholder]</div>
           <div><strong>Program</strong>[University Name], B.S. Mechanical Engineering, Class of 20XX</div>
-          <div><strong>Focus</strong>Product Design &middot; CAD &middot; Robotics</div>
+          <div><strong>Focus</strong>[e.g. Product Design &middot; CAD &middot; Robotics — replace with your own focus areas]</div>
         </div>
       </div>
     </section>
 
-    <!-- ============ FEATURED PROJECTS ============ -->
+    <!-- ============ CURRENT FOCUS ============ -->
     <section class="section">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow">Selected Work</span>
-            <h2 class="section-title">Featured Projects</h2>
+            <span class="eyebrow">Right Now</span>
+            <h2 class="section-title">Current Focus</h2>
           </div>
-          <p class="section-lede">A running record of engineering projects — CAD models, robotics builds, and manufacturing work — added to as coursework and independent projects progress.</p>
         </div>
-        <div class="card-grid" id="featured-projects"></div>
-        <div style="margin-top: 2.2rem; text-align: right;">
-          <a href="projects.html" class="btn">All Projects <span class="btn-arrow">&rarr;</span></a>
-        </div>
+        <p class="detail-body reveal" style="margin-top: -1.2rem;">
+          Replace this paragraph with what you're currently working on — coursework, a
+          design team, self-directed CAD practice, or a certification you're studying for.
+          Update this section regularly so it always reflects what you're doing now.
+        </p>
       </div>
     </section>
 
@@ -121,16 +114,69 @@
       </div>
     </section>
 
-    <!-- ============ CTA ============ -->
+    <!-- ============ CERTIFICATIONS PREVIEW ============ -->
     <section class="section">
       <div class="container">
-        <div class="coming-soon reveal">
-          <span class="eyebrow">Get In Touch</span>
-          <h2>Open to internships, co-ops, and collaboration</h2>
-          <p>Replace this line with your own availability — e.g. specific terms you're looking for, or the kind of work you want to be found for.</p>
-          <div class="hero-actions" style="justify-content: center; margin-top: 1.6rem;">
-            <a href="contact.html" class="btn btn-primary">Contact Me <span class="btn-arrow">&rarr;</span></a>
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Credentials</span>
+            <h2 class="section-title">Certifications</h2>
           </div>
+          <p class="section-lede">Edit data/certifications-data.js to update status, add verification links, or attach certificate PDFs.</p>
+        </div>
+        <div class="card-grid" id="home-cert-grid"></div>
+        <div style="margin-top: 2.2rem; text-align: right;">
+          <a href="certifications.html" class="btn">All Certifications <span class="btn-arrow">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESUME PREVIEW ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Resume</span>
+            <h2 class="section-title">Resume</h2>
+          </div>
+          <p class="section-lede">Replace assets/resume/resume.pdf with your own exported PDF — this preview and every download link on the site pick up the new file automatically.</p>
+        </div>
+        <div class="pdf-frame-wrap reveal">
+          <div class="pdf-toolbar">
+            <span>[resume.pdf] &mdash; Placeholder</span>
+            <a href="assets/resume/resume.pdf" download class="download-link">Download &darr;</a>
+          </div>
+          <iframe src="assets/resume/resume.pdf" title="Resume PDF preview"></iframe>
+        </div>
+        <div style="margin-top: 1.4rem; text-align: right;">
+          <a href="resume.html" class="btn">Full Resume Page <span class="btn-arrow">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Get In Touch</span>
+            <h2 class="section-title">Contact</h2>
+          </div>
+          <p class="section-lede">Replace this line with your own availability — e.g. specific terms you're looking for, or the kind of work you want to be found for.</p>
+        </div>
+        <div class="contact-list reveal">
+          <a class="contact-row" href="mailto:dawilliams835@gmail.com">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">dawilliams835@gmail.com</span>
+          </a>
+          <a class="contact-row" href="https://linkedin.com/in/darnelwilliams030106/" target="_blank" rel="noopener">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/darnelwilliams030106/</span>
+          </a>
+          <a class="contact-row" href="assets/resume/resume.pdf" download>
+            <span class="contact-label">Resume</span>
+            <span class="contact-value">Download PDF &darr;</span>
+          </a>
         </div>
       </div>
     </section>
@@ -139,21 +185,21 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <div class="nav-mark">[LASTNAME]<span class="dot">.</span>ME</div>
-        <p class="footer-note">&copy; <span id="year"></span> [Your Full Name]. Built to grow for the long haul.</p>
+        <div class="nav-mark">Darnel<span class="dot">.</span>Williams</div>
+        <p class="footer-note">&copy; <span id="year"></span> Darnel Williams — Mechanical Engineering Portfolio.</p>
       </div>
       <div class="footer-links">
-        <a href="mailto:your.email@example.com">Email</a>
-        <a href="https://linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:dawilliams835@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/darnelwilliams030106/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="assets/resume/resume.pdf" download>Resume</a>
       </div>
     </div>
   </footer>
 
-  <script src="data/projects-data.js"></script>
+  <script src="data/certifications-data.js"></script>
   <script src="js/main.js"></script>
   <script>
-    renderProjectGrid("#featured-projects", { featuredOnly: true });
+    renderCertGrid("#home-cert-grid");
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
