@@ -12,10 +12,15 @@
   if (toggle && links) {
     toggle.addEventListener("click", () => {
       const open = links.classList.toggle("open");
+      document.body.classList.toggle("nav-open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
     links.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => links.classList.remove("open"))
+      a.addEventListener("click", () => {
+        links.classList.remove("open");
+        document.body.classList.remove("nav-open");
+        toggle.setAttribute("aria-expanded", "false");
+      })
     );
   }
 
