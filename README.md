@@ -1,55 +1,53 @@
 # Mechanical Engineering Portfolio
 
-A long-term personal portfolio site for a mechanical engineering student — built to grow from a few placeholder projects into dozens of real ones over years of coursework, robotics work, and internships.
+A static, dependency-free personal portfolio site for a mechanical engineering student. It is built with plain HTML, CSS, and JavaScript so it stays easy to edit by hand and deploy from GitHub.
 
-## What this is
+## Main Pages
 
-A static, dependency-free website (plain HTML, CSS, and JavaScript — no framework, no build step). Every page uses a dark, engineering/blueprint-inspired design system with subtle blue accents, a grid-line background, and scroll-triggered reveal animations.
+- `index.html` - Home
+- `about.html` - Education, experience, skills, and profile photo area
+- `projects.html` and `projects/` - Project index and project detail pages
+- `drawings.html` - Engineering drawing archive
+- `certifications.html` - Certification cards rendered from `data/certifications-data.js`
+- `resume.html` - Embedded resume PDF and download links
+- `contact.html` - Contact links and Netlify form
+- `blog.html` - Future research/blog page
 
-Pages:
+## Asset Folders
 
-- **Home** (`index.html`) — hero intro, featured projects, skill highlights
-- **About** (`about.html`) — background and a timeline of education/experience
-- **Projects** (`projects.html`, `projects/`) — filterable project index plus a reusable project detail template
-- **Engineering Drawings** (`drawings.html`) — inline PDF preview, image gallery, downloads
-- **Certifications** (`certifications.html`) — data-driven certification cards
-- **Resume** (`resume.html`) — embedded PDF viewer and download button
-- **Contact** (`contact.html`) — contact links plus a working Netlify Forms contact form
-- **Research/Blog** (`blog.html`) — placeholder for future long-form writing
+Use these folders when adding portfolio files:
 
-Everything currently on the site is a labeled placeholder — no invented projects, employers, or accomplishments. Replace the bracketed text, images, and PDFs with your own content as you go.
+```text
+assets/resume/resume.pdf
+assets/certifications/cswa.pdf
+assets/certifications/autocad.pdf
+assets/certifications/images/
+assets/drawings/pdf/
+assets/drawings/previews/
+assets/images/profile/profile.jpg
+assets/images/projects/
+```
 
-## Key technologies
+Empty folders contain `.gitkeep` files so GitHub keeps the structure. You can leave those files alone.
 
-- Plain HTML5 / CSS3 / vanilla JavaScript (ES6) — no build tooling required
-- Google Fonts: Big Shoulders (display), IBM Plex Sans (body), IBM Plex Mono (technical labels)
-- Netlify Forms for the contact form (serverless, no backend code)
-- Netlify for hosting (see `netlify.toml`)
+## Updating Content
 
-## Running locally
+- Resume: replace `assets/resume/resume.pdf`. The Resume page updates automatically.
+- Certifications: place PDFs in `assets/certifications/`, then edit `data/certifications-data.js` if names, dates, links, or credential details change.
+- Drawings: place PDFs in `assets/drawings/pdf/` and preview images in `assets/drawings/previews/`, then copy the commented example card in `drawings.html`.
+- Projects: place project images in `assets/images/projects/`, place downloadable project files where you want them under `assets/`, then add the project to `data/projects-data.js` and create/copy a project detail page in `projects/`.
+- Profile photo: save the image as `assets/images/profile/profile.jpg`. The About page will show a fallback if the file is missing.
 
-No install step is required. Either:
+See `PORTFOLIO_GUIDE.md` for a more detailed step-by-step guide.
+
+## Running Locally
+
+No install step is required. Open `index.html` directly, or serve the folder with any static server.
 
 ```bash
-# Open directly
-open index.html
-
-# Or serve it (recommended, so relative paths and fetch() behave like production)
 npx serve .
 ```
 
-To test the Netlify Forms submission locally with full Netlify emulation:
+## Deployment
 
-```bash
-netlify dev
-```
-
-## Editing content
-
-- **Projects** — duplicate `projects/_template.html`, fill in your content, then add one entry to `data/projects-data.js`. The homepage and `projects.html` grids update automatically.
-- **Certifications** — edit the array in `data/certifications-data.js`.
-- **Drawings** — drop images in `assets/images/drawings/` and PDFs in `assets/drawings/`, then add a `.gallery-item` block in `drawings.html`.
-- **Resume** — replace `assets/resume/resume.pdf` with your own exported PDF.
-- **Contact details / social links** — update the `mailto:`, LinkedIn, and GitHub links in `contact.html` and the site footer (repeated at the bottom of every page).
-
-See `AGENTS.md` for a more detailed structural breakdown.
+Because this is a static site, pushing changes to GitHub is enough for Netlify to redeploy if the repository is connected there.

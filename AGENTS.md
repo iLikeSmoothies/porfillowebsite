@@ -25,10 +25,13 @@ js/main.js              Shared behavior: nav toggle, active-link highlight, scro
 data/projects-data.js   Project index array + card renderer + filter bar renderer
 data/certifications-data.js  Certification array + card renderer
 
-assets/images/          SVG placeholders (blueprint-style) + headshot placeholder
-assets/resume/          Placeholder resume.pdf
-assets/drawings/        Placeholder engineering drawing PDF
-assets/downloads/projects/  Placeholder project download files
+assets/resume/resume.pdf
+assets/certifications/  Certification PDFs such as cswa.pdf and autocad.pdf
+assets/certifications/images/
+assets/drawings/pdf/    Engineering drawing PDFs
+assets/drawings/previews/  Drawing preview images
+assets/images/profile/  Profile photo at profile.jpg
+assets/images/projects/ Project images
 ```
 
 ## Conventions
@@ -37,7 +40,7 @@ assets/downloads/projects/  Placeholder project download files
 - **Data-driven grids, hand-authored detail pages.** Project cards and certification cards render from JS arrays (`data/*.js`) so adding one is a one-line edit. Project *detail* pages are full static HTML files cloned from `projects/_template.html` — this keeps each project page fully custom without needing a template engine.
 - **Every nav/footer block is duplicated per page.** There's no includes system. When changing the nav links or footer, update all HTML files (a simple `grep -rl 'nav-links' *.html projects/*.html` finds them).
 - **Design tokens live in `:root` in `css/style.css`.** Colors, fonts, spacing, and the easing curve are all CSS custom properties — change them once to reskin the whole site.
-- **Placeholders use `[bracketed text]`.** This convention marks anything the site owner still needs to replace. Keep it consistent when adding new placeholder content.
+- **Avoid fake content.** Do not invent projects, employers, credentials, or accomplishments. Use real portfolio content or a clean empty state.
 - **`projects/example-project.html` is explicitly labeled as a non-real demo** via a banner at the top of the page. Do not remove that banner or make the content look like a real project — the user has asked that no fake projects/companies/accomplishments be invented.
 
 ## Netlify specifics
