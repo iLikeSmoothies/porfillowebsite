@@ -10,11 +10,17 @@
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
   if (toggle && links) {
+    const setMobileMenuTop = () => {
+      const header = document.querySelector(".site-header");
+      if (header) document.documentElement.style.setProperty("--nav-menu-top", `${header.offsetHeight}px`);
+    };
     toggle.addEventListener("click", () => {
+      setMobileMenuTop();
       const open = links.classList.toggle("open");
       document.body.classList.toggle("nav-open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
+    window.addEventListener("resize", setMobileMenuTop, { passive: true });
     links.querySelectorAll("a").forEach((a) =>
       a.addEventListener("click", () => {
         links.classList.remove("open");

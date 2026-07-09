@@ -269,8 +269,13 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 860px) {
+  .site-header {
+    z-index: 1000;
+    background: rgba(10, 13, 18, 0.94);
+  }
   .nav-toggle { display: flex; }
   body.nav-open { overflow: hidden; }
+  body.nav-open .site-header { background: #0a0d12; }
   .nav {
     display: flex;
     align-items: flex-start;
@@ -291,10 +296,16 @@ img { max-width: 100%; display: block; }
   .nav-contact::before { display: none; }
   .nav-links {
     position: fixed;
-    z-index: 120;
-    inset: 72px 0 0 0;
-    min-height: calc(100dvh - 72px);
-    background: rgba(10, 13, 18, 0.96);
+    z-index: 1001;
+    top: var(--nav-menu-top, 112px);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #0a0d12;
+    background-image:
+      linear-gradient(var(--border-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
+    background-size: 64px 64px;
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     flex-direction: column;
