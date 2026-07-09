@@ -1,0 +1,27 @@
+{
+  "_instructions": "Drop certificate PDFs into assets/certifications/, then add or edit certification objects here.",
+  "certifications": [
+    {
+      "title": "Certified SOLIDWORKS Associate (CSWA) - Mechanical Design",
+      "issuer": "Dassault Systèmes",
+      "status": "earned",
+      "date": "Issued April 28, 2023",
+      "description": "Credential focused on SOLIDWORKS mechanical design skills, including part modeling, assemblies, and engineering drawing workflows.",
+      "credentialId": "C-PEGXJ2VUNM",
+      "credentialUrl": null,
+      "fileUrl": "assets/certifications/cswa.pdf"
+    },
+    {
+      "title": "Autodesk AutoCAD Certified User",
+      "issuer": "Autodesk / Certiport",
+      "status": "earned",
+      "date": "Issued March 21, 2024",
+      "description": "Credential demonstrating AutoCAD drafting and design fundamentals for technical drawings and CAD documentation.",
+      "credentialId": null,
+      "credentialUrl": null,
+      "verifyPlaceholder": true,
+      "fileUrl": "assets/certifications/autocad.pdf",
+      "_credlyNote": "The Credly embed caused a browser script error during testing. Paste the public Credly verification URL into credentialUrl when ready."
+    }
+  ]
+}

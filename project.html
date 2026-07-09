@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research - Darnel Williams</title>
+  <title>Engineering Project - Darnel Williams</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -31,24 +31,7 @@
     </div>
   </header>
 
-  <main>
-    <section class="page-intro">
-      <div class="container">
-        <span class="eyebrow reveal">Research &amp; Writing</span>
-        <h1 class="page-title reveal reveal-delay-1">Research Notes</h1>
-        <p class="page-desc reveal reveal-delay-2">Future space for design notes, research summaries, lab work, and project writeups when there is real work ready to publish.</p>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top: 1rem;">
-      <div class="container">
-        <div class="empty-state reveal">
-          <h3>Research notes will be added when ready.</h3>
-          <p>This keeps the site honest while leaving room for future coursework, engineering research, or project reflections.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+  <main id="project-detail"></main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
@@ -64,7 +47,11 @@
     </div>
   </footer>
 
+  <script src="data/projects-data.js"></script>
   <script src="js/main.js"></script>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    renderProjectDetail("#project-detail");
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

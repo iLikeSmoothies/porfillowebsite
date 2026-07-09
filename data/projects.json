@@ -1,0 +1,38 @@
+{
+  "_instructions": "Static websites cannot automatically scan folders on Netlify. To add a project, create a folder in assets/projects/, then add one object to the projects array below.",
+  "_exampleProject": {
+    "slug": "project-1",
+    "title": "Project title",
+    "category": "CAD / Mechanical Design",
+    "year": "2026",
+    "folder": "assets/projects/Project_1/",
+    "summary": "One honest sentence about the project.",
+    "featured": true,
+    "tags": ["SolidWorks", "CAD"],
+    "overview": ["Short overview paragraph."],
+    "sketches": ["Optional notes about sketches."],
+    "designProcess": ["Optional notes about the design process."],
+    "cadImages": [
+      {
+        "src": "assets/projects/Project_1/picture_1.png",
+        "caption": "Caption for picture_1.png"
+      }
+    ],
+    "engineeringDrawings": [
+      {
+        "title": "Drawing title",
+        "file": "assets/projects/Project_1/drawing_1.pdf",
+        "caption": "Caption for drawing_1.pdf"
+      }
+    ],
+    "downloads": [
+      {
+        "title": "Download title",
+        "file": "assets/projects/Project_1/drawing_1.pdf",
+        "type": "PDF"
+      }
+    ],
+    "lessonsLearned": ["Optional lesson learned."]
+  },
+  "projects": []
+}

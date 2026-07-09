@@ -1,53 +1,42 @@
-# Mechanical Engineering Portfolio
+# Darnel Williams Mechanical Engineering Portfolio
 
-A static, dependency-free personal portfolio site for a mechanical engineering student. It is built with plain HTML, CSS, and JavaScript so it stays easy to edit by hand and deploy from GitHub.
+A static, dependency-free mechanical engineering portfolio built with plain HTML, CSS, and JavaScript. The site is designed to stay easy to maintain by placing files into organized folders and updating simple JSON manifests.
 
-## Main Pages
+## Main Workflow
 
-- `index.html` - Home
-- `about.html` - Education, experience, skills, and profile photo area
-- `projects.html` and `projects/` - Project index and project detail pages
-- `drawings.html` - Engineering drawing archive
-- `certifications.html` - Certification cards rendered from `data/certifications-data.js`
-- `resume.html` - Embedded resume PDF and download links
-- `contact.html` - Contact links and Netlify form
-- `blog.html` - Future research/blog page
+1. Drop files into the matching folder in `assets/`.
+2. Update `data/projects.json` or `data/certifications.json` when the site needs to display those files.
+3. Commit and push.
+4. Netlify redeploys the static site.
 
-## Asset Folders
-
-Use these folders when adding portfolio files:
+## Important Folders
 
 ```text
-assets/resume/resume.pdf
-assets/certifications/cswa.pdf
-assets/certifications/autocad.pdf
-assets/certifications/images/
-assets/drawings/pdf/
-assets/drawings/previews/
-assets/images/profile/profile.jpg
-assets/images/projects/
+assets/resume/
+assets/projects/
+assets/certifications/
+assets/drawings/
+assets/images/profile/
 ```
 
-Empty folders contain `.gitkeep` files so GitHub keeps the structure. You can leave those files alone.
+Each important folder has a `README.txt` explaining what belongs there.
 
-## Updating Content
+## Key Files
 
-- Resume: replace `assets/resume/resume.pdf`. The Resume page updates automatically.
-- Certifications: place PDFs in `assets/certifications/`, then edit `data/certifications-data.js` if names, dates, links, or credential details change.
-- Drawings: place PDFs in `assets/drawings/pdf/` and preview images in `assets/drawings/previews/`, then copy the commented example card in `drawings.html`.
-- Projects: place project images in `assets/images/projects/`, place downloadable project files where you want them under `assets/`, then add the project to `data/projects-data.js` and create/copy a project detail page in `projects/`.
-- Profile photo: save the image as `assets/images/profile/profile.jpg`. The About page will show a fallback if the file is missing.
+- `index.html` - Home
+- `about.html` - About, education, experience, skills
+- `projects.html` - Engineering project cards
+- `project.html` - Project detail page powered by `data/projects.json`
+- `certifications.html` - Certification cards powered by `data/certifications.json`
+- `resume.html` - Uses `assets/resume/Darnel Williams Resume.pdf`
+- `drawings.html` - Explains how drawings connect to project pages
+- `PORTFOLIO_GUIDE.md` - Step-by-step maintenance guide
 
-See `PORTFOLIO_GUIDE.md` for a more detailed step-by-step guide.
+## Static Site Note
 
-## Running Locally
+Netlify serves this as a static website, so the site cannot automatically scan folders after deploy. The simple alternative is already set up:
 
-No install step is required. Open `index.html` directly, or serve the folder with any static server.
+- projects are listed in `data/projects.json`
+- certifications are listed in `data/certifications.json`
 
-```bash
-npx serve .
-```
-
-## Deployment
-
-Because this is a static site, pushing changes to GitHub is enough for Netlify to redeploy if the repository is connected there.
+That keeps updates close to: drop files, update one JSON file, commit, push.

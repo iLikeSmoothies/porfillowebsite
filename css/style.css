@@ -381,6 +381,15 @@ section { position: relative; z-index: 2; }
 }
 .card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
 .card:hover .card-media img { transform: scale(1.05); }
+.card-media-empty {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
 .card-body { padding: 1.4rem; display: flex; flex-direction: column; gap: 0.7rem; flex: 1; }
 .card-tag {
   font-family: var(--font-mono);
@@ -470,8 +479,18 @@ section { position: relative; z-index: 2; }
   padding: 3rem 2rem;
   text-align: center;
   color: var(--text-faint);
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+}
+.empty-state h3 {
+  font-family: var(--font-display);
+  color: var(--text);
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+.empty-state p {
+  color: var(--text-dim);
+  max-width: 58ch;
+  margin: 0 auto;
 }
 
 /* ---------- Page intro (sub-pages) ---------- */
@@ -512,6 +531,7 @@ section { position: relative; z-index: 2; }
 .cert-desc { color: var(--text-dim); font-size: 0.9rem; }
 .cert-foot { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 0.6rem; border-top: 1px solid var(--border-soft); font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint); }
 .cert-badge { min-height: 270px; display: flex; align-items: center; }
+.cert-link-disabled { color: var(--text-faint); }
 
 /* ---------- Drawing / gallery items ---------- */
 .gallery-grid {
@@ -630,6 +650,31 @@ section { position: relative; z-index: 2; }
 .project-fact { display: flex; justify-content: space-between; font-size: 0.88rem; }
 .project-fact .k { font-family: var(--font-mono); color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.7rem; }
 .project-fact .v { color: var(--text-dim); text-align: right; }
+
+.project-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.4rem;
+}
+.project-media-item {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-panel);
+}
+.project-media-item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: var(--bg-raised);
+}
+.project-media-item figcaption {
+  padding: 0.9rem 1rem;
+  color: var(--text-dim);
+  font-size: 0.86rem;
+}
 
 .detail-section { padding-block: clamp(2.6rem, 6vh, 4rem); border-top: 1px solid var(--border-soft); }
 .detail-section:first-of-type { border-top: none; }

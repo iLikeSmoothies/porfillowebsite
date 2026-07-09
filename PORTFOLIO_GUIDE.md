@@ -1,94 +1,166 @@
 # Portfolio Guide
 
-This guide shows where to put files so the site stays organized and easy to update.
+This site is a static Netlify site. It cannot automatically scan folder contents after deploy, so the maintainable workflow is:
+
+1. Drop files into the organized asset folders.
+2. Update one simple JSON file when a page needs to know about those files.
+3. Commit and push.
+4. Netlify redeploys the site.
 
 ## Resume
 
-Use one stable filename:
+Resume folder:
 
 ```text
-assets/resume/resume.pdf
+assets/resume/
 ```
 
-When your resume changes, export the new PDF, rename it to `resume.pdf`, replace the old file, commit, and push. The embedded viewer and every resume download link already point to this file.
+The site uses this exact file:
+
+```text
+assets/resume/Darnel Williams Resume.pdf
+```
+
+To replace the resume, export the new resume PDF, rename it to `Darnel Williams Resume.pdf`, place it in `assets/resume/`, commit, and push. The Resume page will automatically show the new file because the filename stays the same.
 
 ## Certifications
 
-Use these files:
+Certification folder:
+
+```text
+assets/certifications/
+```
+
+Current expected files:
 
 ```text
 assets/certifications/cswa.pdf
 assets/certifications/autocad.pdf
-assets/certifications/images/
 ```
 
-The certification cards are controlled by:
+Certification cards are controlled by:
 
 ```text
-data/certifications-data.js
+data/certifications.json
 ```
 
-To add another certification, copy an existing object in the `CERTIFICATIONS` array and update the title, issuer, date, description, file path, and credential details. If a Credly badge is available, paste its badge ID into `credlyBadgeId`.
+To add a certification, place the PDF in `assets/certifications/`, then add one object to the `certifications` array in `data/certifications.json`.
+
+## Engineering Projects
+
+Project folder:
+
+```text
+assets/projects/
+```
+
+Create one folder per project:
+
+```text
+assets/projects/Project_1/
+```
+
+Inside a project folder, you can add files like:
+
+```text
+picture_1.png
+caption_1.txt
+picture_2.png
+caption_2.txt
+drawing_1.pdf
+caption_3.txt
+notes.txt
+```
+
+Project cards and project pages are controlled by:
+
+```text
+data/projects.json
+```
+
+To add a project, create the folder, add the files, then add one project object to the `projects` array in `data/projects.json`. Use the `_exampleProject` object in that file as the pattern.
+
+Each project supports:
+
+- overview
+- sketches
+- design process
+- CAD images
+- engineering drawings
+- captions
+- downloads
+- lessons learned
+
+Open project detail pages through `project.html?project=your-slug`. The project cards generate those links automatically.
+
+## Pictures And Captions
+
+For images, put the image file in the project folder and add it to the `cadImages` array in `data/projects.json`.
+
+Example:
+
+```json
+{
+  "src": "assets/projects/Project_1/picture_1.png",
+  "caption": "Short caption for the image."
+}
+```
+
+Caption `.txt` files can stay in the project folder for your records. The website displays captions from `data/projects.json` so the static site can render them reliably.
 
 ## Drawings
 
-Use these folders:
+If a drawing belongs to a project, put it in that project folder:
 
 ```text
-assets/drawings/pdf/
-assets/drawings/previews/
+assets/projects/Project_1/drawing_1.pdf
 ```
 
-Put exported drawing PDFs in `assets/drawings/pdf/`. Put preview images in `assets/drawings/previews/`.
+Then list it under `engineeringDrawings` in `data/projects.json`.
 
-The visible Drawings page is currently an empty state. When you are ready to show a drawing, open `drawings.html`, copy the commented example drawing card, and update:
-
-- preview image path
-- drawing title
-- PDF download path
-- image alt text
-
-## Projects
-
-Use this folder for project images:
+If a drawing is not tied to a project yet, store it in:
 
 ```text
-assets/images/projects/
+assets/drawings/
 ```
-
-Project cards are controlled by:
-
-```text
-data/projects-data.js
-```
-
-Project detail pages live in:
-
-```text
-projects/
-```
-
-To add a project, copy `projects/_template.html`, rename it, fill in real project information, then add a matching entry in `data/projects-data.js`. Do not add fake projects or accomplishments just to fill space.
 
 ## Profile Photo
 
-Use this exact path:
+Profile photo folder:
+
+```text
+assets/images/profile/
+```
+
+The About page looks for:
 
 ```text
 assets/images/profile/profile.jpg
 ```
 
-The About page already looks for this file. If the file is missing, the page hides the image and shows a clean fallback instead of a broken image icon.
+If `profile.jpg` is missing, the image area hides so the page does not show a broken image.
 
-## GitHub Workflow
+## About Page Text
 
-After replacing or adding files:
+The About page content is written directly in:
 
-```bash
-git status
-git add .
-git commit -m "Update portfolio content"
-git push
+```text
+about.html
 ```
 
-If the site is connected to Netlify, the pushed changes will publish automatically.
+Update that file when education, experience, skills, or extracurriculars change.
+
+## What Controls What
+
+- `index.html` - Home page
+- `about.html` - About, education, experience, skills, profile photo
+- `projects.html` - Engineering project card grid
+- `project.html` - Dynamic project detail page
+- `data/projects.json` - Project content manifest
+- `certifications.html` - Certification card grid
+- `data/certifications.json` - Certification content manifest
+- `resume.html` - Resume viewer and download links
+- `drawings.html` - Drawing storage guidance and project connection
+- `contact.html` - Contact information and Netlify form
+- `css/style.css` - Visual design system
+- `js/main.js` - Navigation, reveal animation, scroll progress, form behavior

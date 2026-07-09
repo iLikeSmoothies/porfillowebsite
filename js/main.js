@@ -23,7 +23,7 @@
   const path = window.location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-links a").forEach((a) => {
     const href = a.getAttribute("href");
-    if (href === path || (path === "" && href === "index.html")) {
+    if (href === path || (path === "project.html" && href === "projects.html") || (path === "" && href === "index.html")) {
       a.classList.add("active");
     }
   });
@@ -59,6 +59,16 @@
     document.addEventListener("scroll", update, { passive: true });
     update();
   }
+
+  /* Hide optional image frames when the file has not been added yet. */
+  document.querySelectorAll("[data-optional-image] img").forEach((img) => {
+    const frame = img.closest("[data-optional-image]");
+    const hideFrame = () => {
+      if (frame) frame.hidden = true;
+    };
+    img.addEventListener("error", hideFrame);
+    if (img.complete && img.naturalWidth === 0) hideFrame();
+  });
 
   /* Netlify form AJAX submission (progressive enhancement) */
   const contactForm = document.getElementById("contact-form");
