@@ -1,52 +1,36 @@
 # AGENTS.md
 
-Guidance for AI agents and future maintenance work on this codebase.
+This is a static mechanical engineering portfolio site for Darnel Williams.
 
 ## Architecture
 
-Static, multi-page site. No framework, no bundler, no package.json. Every `.html` file is served as-is by Netlify.
+No framework, no bundler, no build step.
 
-```text
-index.html                 Home
-about.html                 About, education, experience, skills
-projects.html              Engineering project index
-project.html               Dynamic project detail page
-drawings.html              Drawing guidance connected to project folders
-certifications.html        Certification cards
-resume.html                Embedded PDF resume + download
-contact.html               Contact links + Netlify Forms contact form
-blog.html                  Future research notes
+Public pages:
 
-css/style.css              Shared visual design system
-js/main.js                 Shared behavior
-data/projects.json         Project manifest
-data/projects-data.js      Project renderer
-data/certifications.json   Certification manifest
-data/certifications-data.js Certification renderer
+- `index.html`
+- `about.html`
+- `projects.html`
+- `certifications.html`
+- `resume.html`
 
-assets/resume/             Resume PDF
-assets/projects/           One folder per project
-assets/certifications/     Certification PDFs
-assets/drawings/           General drawing files
-assets/images/profile/     Profile photo
-```
+Shared files:
 
-## Conventions
+- `css/style.css`
+- `js/main.js`
 
-- Preserve the current visual style, typography, animations, and engineering aesthetic.
-- Do not add a framework or build step.
-- Do not invent fake projects, employers, credentials, or accomplishments.
-- Because Netlify serves a static site, folder contents cannot be scanned automatically. Use `data/projects.json` and `data/certifications.json` as the maintainable manifest files.
-- The Resume page uses `assets/resume/Darnel Williams Resume.pdf`.
-- The About page looks for `assets/images/profile/profile.jpg` and hides the image area if missing.
-- Project files live under `assets/projects/Project_Name/`; project cards and detail pages are generated from `data/projects.json`.
+Assets:
 
-## Adding Content
+- `assets/resume/resume.pdf`
+- `assets/certifications/`
+- `assets/projects/`
+- `assets/images/profile/profile.jpg`
 
-- Resume: replace `assets/resume/Darnel Williams Resume.pdf`.
-- Certifications: drop PDFs in `assets/certifications/`, then update `data/certifications.json`.
-- Projects: create a project folder in `assets/projects/`, add files, then add a project object to `data/projects.json`.
-- Drawings: keep project drawings inside project folders when possible; use `assets/drawings/` for general drawing files.
-- Profile photo: add `assets/images/profile/profile.jpg`.
+## Rules
 
-See `PORTFOLIO_GUIDE.md` for user-facing instructions.
+- Preserve the current dark engineering aesthetic.
+- Keep the site simple and manual.
+- Do not add fake projects, fake certifications, fake employers, fake links, or placeholder names.
+- Do not add GitHub, Blog, Research, Contact, services, testimonials, or agency-style language to the navigation.
+- Contact info belongs in the footer only: Email, LinkedIn, Resume download.
+- Resume page must embed `assets/resume/resume.pdf`.

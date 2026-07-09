@@ -14,16 +14,16 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="nav-mark">DARNEL<span class="dot">.</span>ME</a>
+      <a class="nav-brand" href="index.html">
+        <span class="nav-mark">Darnel<span class="dot">.</span>Williams</span>
+        <span class="nav-subtitle">Mechanical Engineering Portfolio</span>
+      </a>
       <nav class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Engineering Projects</a>
-        <a href="drawings.html">Drawings</a>
         <a href="certifications.html">Certifications</a>
         <a href="resume.html">Resume</a>
-        <a href="blog.html">Research</a>
-        <a href="contact.html">Contact</a>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M1 4H17M1 9H17M1 14H17" stroke="currentColor" stroke-width="1.5"/></svg>
@@ -36,13 +36,39 @@
       <div class="container">
         <span class="eyebrow reveal">Certifications</span>
         <h1 class="page-title reveal reveal-delay-1">Credentials</h1>
-        <p class="page-desc reveal reveal-delay-2">Certifications and training relevant to mechanical engineering practice. Drop certificate PDFs into assets/certifications/ and update data/certifications.json when credentials change.</p>
+        <p class="page-desc reveal reveal-delay-2">Certifications related to CAD, drafting, and mechanical design skills.</p>
       </div>
     </section>
 
     <section class="section" style="padding-top: 1rem;">
       <div class="container">
-        <div class="card-grid" id="cert-grid"></div>
+        <div class="card-grid">
+          <div class="cert-card reveal">
+            <span class="cert-status earned"><span class="dot"></span>Earned</span>
+            <h2 class="cert-title">Certified SOLIDWORKS Associate (CSWA) - Mechanical Design</h2>
+            <p class="cert-issuer">Issuer: Dassault Syst&egrave;mes</p>
+            <p class="cert-meta">Issued: April 28, 2023</p>
+            <p class="cert-meta">Credential ID: C-PEGXJ2VUNM</p>
+            <p class="cert-meta">Context: Academic exam at Kankakee Area Career Center</p>
+            <p class="cert-desc">Recognizes foundational SOLIDWORKS mechanical design skills, including part modeling, assemblies, and engineering design tools.</p>
+            <div class="cert-foot">
+              <span>PDF not added yet</span>
+              <span class="cert-link-disabled">assets/certifications/cswa.pdf</span>
+            </div>
+          </div>
+
+          <div class="cert-card reveal reveal-delay-1">
+            <span class="cert-status earned"><span class="dot"></span>Earned</span>
+            <h2 class="cert-title">Autodesk AutoCAD Certified User</h2>
+            <p class="cert-issuer">Issuer: Autodesk / Certiport</p>
+            <p class="cert-meta">Issued: March 21, 2024</p>
+            <p class="cert-desc">Recognizes foundational AutoCAD drafting and design skills used for technical drawings and design documentation.</p>
+            <div class="cert-foot">
+              <span>PDF not added yet</span>
+              <span class="cert-link-disabled">Verify Credential link can be added later</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -50,22 +76,18 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <div class="nav-mark">DARNEL<span class="dot">.</span>ME</div>
-        <p class="footer-note">&copy; <span id="year"></span> Darnel Williams. Built to grow for the long haul.</p>
+        <div class="nav-mark">Darnel<span class="dot">.</span>Williams</div>
+        <p class="footer-note">&copy; <span id="year"></span> Darnel Williams - Mechanical Engineering Portfolio.</p>
       </div>
       <div class="footer-links">
         <a href="mailto:dawilliams835@gmail.com">Email</a>
         <a href="https://linkedin.com/in/darnelwilliams030106/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/iLikeSmoothies" target="_blank" rel="noopener">GitHub</a>
+        <a href="assets/resume/resume.pdf" download>Resume Download</a>
       </div>
     </div>
   </footer>
 
-  <script src="data/certifications-data.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    renderCertGrid("#cert-grid");
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

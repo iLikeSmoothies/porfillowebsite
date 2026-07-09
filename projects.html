@@ -14,16 +14,16 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="nav-mark">DARNEL<span class="dot">.</span>ME</a>
+      <a class="nav-brand" href="index.html">
+        <span class="nav-mark">Darnel<span class="dot">.</span>Williams</span>
+        <span class="nav-subtitle">Mechanical Engineering Portfolio</span>
+      </a>
       <nav class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Engineering Projects</a>
-        <a href="drawings.html">Drawings</a>
         <a href="certifications.html">Certifications</a>
         <a href="resume.html">Resume</a>
-        <a href="blog.html">Research</a>
-        <a href="contact.html">Contact</a>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M1 4H17M1 9H17M1 14H17" stroke="currentColor" stroke-width="1.5"/></svg>
@@ -35,48 +35,91 @@
     <section class="page-intro">
       <div class="container">
         <span class="eyebrow reveal">Engineering Projects</span>
-        <h1 class="page-title reveal reveal-delay-1">Project Archive</h1>
-        <p class="page-desc reveal reveal-delay-2">Each project lives in its own folder under assets/projects/ and is listed in data/projects.json. The cards and project pages update from that one manifest.</p>
+        <h1 class="page-title reveal reveal-delay-1">Project Portfolio</h1>
+        <p class="page-desc reveal reveal-delay-2">This section will include both finished designs and design process work, including CAD models, engineering drawings, sketches, design iterations, and mechanical design studies.</p>
       </div>
     </section>
 
     <section class="section" style="padding-top: 1rem;">
       <div class="container">
-        <div class="filter-bar" id="project-filters"></div>
-        <div class="card-grid" id="project-grid"></div>
+        <div class="empty-state reveal">
+          <h3>My project portfolio is currently being built.</h3>
+          <p>This section will include CAD models, engineering drawings, sketches, design iterations, and mechanical design projects as they are completed.</p>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="coming-soon reveal">
-          <span class="eyebrow">Maintainable Setup</span>
-          <h2>Add a project by folder and manifest</h2>
-          <p>Create a folder such as assets/projects/Project_1/, add images, drawings, captions, and notes, then add one matching project entry to data/projects.json.</p>
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">What Will Be Added</span>
+            <h2 class="section-title">Project Categories</h2>
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="cert-card reveal">
+            <span class="card-tag">CAD Models</span>
+            <p class="cert-desc">3D models, assemblies, and visualizations from coursework and independent design practice.</p>
+          </div>
+          <div class="cert-card reveal reveal-delay-1">
+            <span class="card-tag">Engineering Drawings</span>
+            <p class="cert-desc">Technical drawings, dimensions, drafting practice, and documentation for design work.</p>
+          </div>
+          <div class="cert-card reveal reveal-delay-2">
+            <span class="card-tag">Sketches and Design Process</span>
+            <p class="cert-desc">Early ideas, design decisions, iterations, and notes that show how projects develop.</p>
+          </div>
+          <div class="cert-card reveal">
+            <span class="card-tag">Mechanical Design Studies</span>
+            <p class="cert-desc">Focused studies in parts, mechanisms, product design, and mechanical problem solving.</p>
+          </div>
+          <div class="cert-card reveal reveal-delay-1">
+            <span class="card-tag">Future Projects</span>
+            <p class="cert-desc">Additional portfolio work will be added as engineering coursework and personal projects are completed.</p>
+          </div>
         </div>
       </div>
     </section>
+
+    <!--
+    Future manual project card/template:
+
+    <section class="detail-section">
+      <div class="container">
+        <span class="detail-label">Project Category</span>
+        <h2 class="detail-title">Project Title</h2>
+        <div class="detail-body">
+          <p><strong>Overview:</strong> Briefly explain what the project is.</p>
+          <p><strong>Problem / Goal:</strong> Explain the design problem or objective.</p>
+          <p><strong>Sketches:</strong> Add sketch images or notes.</p>
+          <p><strong>CAD Model Images:</strong> Add screenshots or renders from assets/projects/.</p>
+          <p><strong>Engineering Drawing PDFs:</strong> Link to drawing PDFs from assets/projects/.</p>
+          <p><strong>Design Process Notes:</strong> Explain key design choices and iterations.</p>
+          <p><strong>Final Result:</strong> Summarize the completed result.</p>
+          <p><strong>Lessons Learned:</strong> Explain what changed or what you learned.</p>
+          <p><strong>Download Links:</strong> Add PDFs, images, or project files as needed.</p>
+        </div>
+      </div>
+    </section>
+    -->
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <div class="nav-mark">DARNEL<span class="dot">.</span>ME</div>
-        <p class="footer-note">&copy; <span id="year"></span> Darnel Williams. Built to grow for the long haul.</p>
+        <div class="nav-mark">Darnel<span class="dot">.</span>Williams</div>
+        <p class="footer-note">&copy; <span id="year"></span> Darnel Williams - Mechanical Engineering Portfolio.</p>
       </div>
       <div class="footer-links">
         <a href="mailto:dawilliams835@gmail.com">Email</a>
         <a href="https://linkedin.com/in/darnelwilliams030106/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/iLikeSmoothies" target="_blank" rel="noopener">GitHub</a>
+        <a href="assets/resume/resume.pdf" download>Resume Download</a>
       </div>
     </div>
   </footer>
 
-  <script src="data/projects-data.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    renderProjectFilterBar("#project-filters", "#project-grid");
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

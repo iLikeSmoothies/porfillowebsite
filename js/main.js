@@ -60,14 +60,16 @@
     update();
   }
 
-  /* Hide optional image frames when the file has not been added yet. */
+  /* Show a clean fallback when an optional image has not been added yet. */
   document.querySelectorAll("[data-optional-image] img").forEach((img) => {
     const frame = img.closest("[data-optional-image]");
-    const hideFrame = () => {
-      if (frame) frame.hidden = true;
+    const fallback = frame ? frame.querySelector(".profile-fallback") : null;
+    const showFallback = () => {
+      img.hidden = true;
+      if (fallback) fallback.hidden = false;
     };
-    img.addEventListener("error", hideFrame);
-    if (img.complete && img.naturalWidth === 0) hideFrame();
+    img.addEventListener("error", showFallback);
+    if (img.complete && img.naturalWidth === 0) showFallback();
   });
 
   /* Netlify form AJAX submission (progressive enhancement) */

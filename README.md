@@ -1,42 +1,25 @@
 # Darnel Williams Mechanical Engineering Portfolio
 
-A static, dependency-free mechanical engineering portfolio built with plain HTML, CSS, and JavaScript. The site is designed to stay easy to maintain by placing files into organized folders and updating simple JSON manifests.
+Static portfolio website for a mechanical engineering student. The site is intentionally simple: plain HTML, CSS, and JavaScript with no build step.
 
-## Main Workflow
-
-1. Drop files into the matching folder in `assets/`.
-2. Update `data/projects.json` or `data/certifications.json` when the site needs to display those files.
-3. Commit and push.
-4. Netlify redeploys the static site.
-
-## Important Folders
-
-```text
-assets/resume/
-assets/projects/
-assets/certifications/
-assets/drawings/
-assets/images/profile/
-```
-
-Each important folder has a `README.txt` explaining what belongs there.
-
-## Key Files
+## Public Pages
 
 - `index.html` - Home
 - `about.html` - About, education, experience, skills
-- `projects.html` - Engineering project cards
-- `project.html` - Project detail page powered by `data/projects.json`
-- `certifications.html` - Certification cards powered by `data/certifications.json`
-- `resume.html` - Uses `assets/resume/Darnel Williams Resume.pdf`
-- `drawings.html` - Explains how drawings connect to project pages
-- `PORTFOLIO_GUIDE.md` - Step-by-step maintenance guide
+- `projects.html` - Engineering projects section
+- `certifications.html` - CSWA and AutoCAD certification information
+- `resume.html` - Embedded resume PDF and download button
 
-## Static Site Note
+## Manual Update Workflow
 
-Netlify serves this as a static website, so the site cannot automatically scan folders after deploy. The simple alternative is already set up:
+- Resume: replace `assets/resume/resume.pdf`.
+- Certification PDFs: add files to `assets/certifications/`, then manually add links in `certifications.html`.
+- Project files: add files to `assets/projects/`, then manually add project sections in `projects.html`.
+- Profile photo: add `assets/images/profile/profile.jpg`.
 
-- projects are listed in `data/projects.json`
-- certifications are listed in `data/certifications.json`
+## Contact Info
 
-That keeps updates close to: drop files, update one JSON file, commit, push.
+Footer links use:
+
+- Email: `dawilliams835@gmail.com`
+- LinkedIn: `linkedin.com/in/darnelwilliams030106/`

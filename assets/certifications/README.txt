@@ -1,7 +1,3 @@
-Put certificate PDFs in this folder.
+Put certification PDFs here.
 
-Current expected files:
-cswa.pdf
-autocad.pdf
-
-Then update data/certifications.json if you add or change certification cards.
+After adding a PDF, manually link it from certifications.html.
