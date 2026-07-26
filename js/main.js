@@ -81,6 +81,49 @@
     update();
   }
 
+  /* Expand project images without leaving the page. */
+  const zoomButtons = document.querySelectorAll("[data-lightbox]");
+  if (zoomButtons.length) {
+    const lightbox = document.createElement("div");
+    lightbox.className = "image-lightbox";
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.setAttribute("aria-label", "Expanded project image");
+    lightbox.innerHTML = `
+      <button class="image-lightbox-close" type="button" aria-label="Close expanded image">&times;</button>
+      <div class="image-lightbox-panel">
+        <img alt="" />
+        <p class="image-lightbox-caption"></p>
+      </div>
+    `;
+    document.body.appendChild(lightbox);
+
+    const image = lightbox.querySelector("img");
+    const caption = lightbox.querySelector(".image-lightbox-caption");
+    const close = () => {
+      lightbox.classList.remove("open");
+      document.body.classList.remove("lightbox-open");
+    };
+
+    zoomButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const thumb = button.querySelector("img");
+        image.src = button.dataset.lightbox;
+        image.alt = thumb ? thumb.alt : "";
+        caption.textContent = button.dataset.lightboxCaption || "";
+        lightbox.classList.add("open");
+        document.body.classList.add("lightbox-open");
+      });
+    });
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox || event.target.closest(".image-lightbox-close")) close();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox.classList.contains("open")) close();
+    });
+  }
+
   /* Show a clean fallback when an optional image has not been added yet. */
   document.querySelectorAll("[data-optional-image] img").forEach((img) => {
     const frame = img.closest("[data-optional-image]");
