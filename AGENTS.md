@@ -23,7 +23,7 @@ Assets:
 
 - `assets/resume/resume.pdf`
 - `assets/certifications/`
-- `assets/projects/`
+- `assets/images/projects/`
 - `assets/images/profile/profile.png`
 
 ## Rules
@@ -32,5 +32,4 @@ Assets:
 - Keep the site simple and manual.
 - Do not add fake projects, fake certifications, fake employers, fake links, or placeholder names.
 - Do not add GitHub, Blog, Research, Contact, services, testimonials, or agency-style language to the navigation.
-- Contact info belongs in the footer only: Email, LinkedIn, Resume download.
-- Resume page must embed `assets/resume/resume.pdf`.
+- Resume page must use `assets/resume/resume.pdf` for open and download links.

@@ -24,13 +24,19 @@ Then edit `certifications.html` by hand to add or update links.
 
 ## Engineering Projects
 
-Put project images, PDFs, and related files in:
+Put project images and visual assets in one folder per project:
 
 ```text
-assets/projects/
+assets/images/projects/project-folder-name/
 ```
 
-Then edit `projects.html` by hand. A reusable future project template is included as an HTML comment near the bottom of the page.
+Example:
+
+```text
+assets/images/projects/adjustable-desk-clamp-dock/
+```
+
+Then edit `projects.html` by hand. Keep newest projects toward the top of the page.
 
 ## Profile Photo
 

@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=20260709-mobile-polish" />
+  <link rel="stylesheet" href="css/style.css?v=20260726-projects" />
 </head>
 <body>
   <div class="scroll-progress"></div>
@@ -40,26 +40,112 @@
       <div class="container">
         <span class="eyebrow reveal">Engineering Projects</span>
         <h1 class="page-title reveal reveal-delay-1">Project Portfolio</h1>
-        <p class="page-desc reveal reveal-delay-2">This section will include both finished designs and design process work, including CAD models, engineering drawings, sketches, design iterations, and mechanical design studies.</p>
+        <p class="page-desc reveal reveal-delay-2">Finished designs, CAD models, engineering drawings, design iterations, and mechanical problem-solving work.</p>
       </div>
     </section>
 
     <section class="section" style="padding-top: 1rem;">
+      <div class="container project-feature">
+        <div class="reveal">
+          <span class="detail-label">Personal CAD / Product Design</span>
+          <h2 class="detail-title">Adjustable Desk Clamp Dock</h2>
+          <div class="detail-body">
+            <p>A modular, 3D-printed controller dock designed in SOLIDWORKS to clamp onto the side of a desk, reduce desktop clutter, and keep charging cables organized.</p>
+            <p>The design separates the desk clamp base from the top controller holder so future attachments can be redesigned and reprinted without remaking the entire clamp assembly.</p>
+          </div>
+          <div class="project-facts">
+            <div class="project-fact"><span class="k">Role</span><span class="v">Individual design, CAD, fabrication</span></div>
+            <div class="project-fact"><span class="k">Tools</span><span class="v">SOLIDWORKS, 3D printing</span></div>
+            <div class="project-fact"><span class="k">Material</span><span class="v">Black PLA</span></div>
+            <div class="project-fact"><span class="k">Printer</span><span class="v">Bambu H2D</span></div>
+          </div>
+        </div>
+        <figure class="project-hero-media reveal reveal-delay-1">
+          <img src="assets/images/projects/adjustable-desk-clamp-dock/controller-dock-in-use.jpeg" alt="3D printed adjustable desk clamp dock holding a game controller" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="detail-section">
       <div class="container">
-        <div class="empty-state reveal">
-          <h3>My project portfolio is currently being built.</h3>
-          <p>This section will include CAD models, engineering drawings, sketches, design iterations, and mechanical design projects as they are completed.</p>
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Case Study</span>
+            <h2 class="section-title">What, How, Results</h2>
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="cert-card reveal">
+            <span class="card-tag">What</span>
+            <p class="cert-desc">I wanted a dedicated place to store my controller without adding more clutter on top of my desk. The dock needed to mount off the desk edge, hold the controller securely, and help route charging cables.</p>
+          </div>
+          <div class="cert-card reveal reveal-delay-1">
+            <span class="card-tag">How</span>
+            <p class="cert-desc">I modeled a clamp base, printed screw, cable-routing slots, and removable top holder in SOLIDWORKS. The top piece snaps into the base so the holder can be redesigned later without reprinting the full clamp.</p>
+          </div>
+          <div class="cert-card reveal reveal-delay-2">
+            <span class="card-tag">Results</span>
+            <p class="cert-desc">The finished dock clamps to the desk, holds the controller in a consistent location, and keeps charging cables hanging to the side. The modular top also leaves room for future attachment designs.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="detail-section">
+      <div class="container two-col">
+        <div class="reveal">
+          <span class="detail-label">Design Process</span>
+          <h2 class="detail-title">Iteration and fabrication choices</h2>
+          <div class="detail-body">
+            <p>The bottom clamp was designed around a straightforward desk-edge mount with printed cable slots. Most of the iteration focused on the top controller holder: spacing, support angle, and how loosely or tightly the controller should sit in the dock.</p>
+            <p>I originally explored a more exact controller-shaped cradle, but simplified the holder after realizing a cleaner open design would print more reliably and be easier to revise later.</p>
+          </div>
+        </div>
+        <div class="cert-card reveal reveal-delay-1">
+          <span class="card-tag">Fabrication Notes</span>
+          <p class="cert-desc">The full assembly was printed in black PLA. The screw and threaded load areas used stronger infill settings because those parts take the most clamping force and wear. The main body pieces used lighter infill to keep the print efficient while still being strong enough for desk use.</p>
+          <p class="cert-desc">Total print time was about 12 hours, with the full idea-to-finished-print process taking roughly three days.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow">What Will Be Added</span>
-            <h2 class="section-title">Project Categories</h2>
+            <span class="eyebrow">Visuals</span>
+            <h2 class="section-title">CAD, Drawings, and Printed Result</h2>
           </div>
+        </div>
+        <div class="project-media-grid">
+          <figure class="project-media-item reveal">
+            <img src="assets/images/projects/adjustable-desk-clamp-dock/controller-dock-empty.jpeg" alt="Empty 3D printed desk clamp dock mounted to a desk" />
+            <figcaption>Printed dock mounted to the desk, showing the controller holder and cable-routing slots.</figcaption>
+          </figure>
+          <figure class="project-media-item reveal reveal-delay-1">
+            <img src="assets/images/projects/adjustable-desk-clamp-dock/exploded-cad-view.png" alt="Exploded SOLIDWORKS CAD view of the adjustable desk clamp dock" />
+            <figcaption>Exploded CAD view showing the removable top holder, clamp base, and printed screw.</figcaption>
+          </figure>
+          <figure class="project-media-item media-contain reveal reveal-delay-2">
+            <img src="assets/images/projects/adjustable-desk-clamp-dock/desk-clamp-assembly-drawing.png" alt="Engineering drawing of the desk clamp dock assembly" />
+            <figcaption>Assembly drawing with the removable controller holder, clamp body, and screw called out.</figcaption>
+          </figure>
+          <figure class="project-media-item media-contain reveal">
+            <img src="assets/images/projects/adjustable-desk-clamp-dock/top-piece-drawing.png" alt="Engineering drawing of the controller stand top piece" />
+            <figcaption>Top-piece drawing documenting the controller holder geometry and major dimensions.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">More Work</span>
+            <h2 class="section-title">Additional Projects Coming Next</h2>
+          </div>
+          <p class="section-lede">Newest projects will stay at the top of this page as more CAD, drawing, and fabrication work is added.</p>
         </div>
         <div class="card-grid">
           <div class="cert-card reveal">
@@ -71,16 +157,8 @@
             <p class="cert-desc">Technical drawings, dimensions, drafting practice, and documentation for design work.</p>
           </div>
           <div class="cert-card reveal reveal-delay-2">
-            <span class="card-tag">Sketches and Design Process</span>
-            <p class="cert-desc">Early ideas, design decisions, iterations, and notes that show how projects develop.</p>
-          </div>
-          <div class="cert-card reveal">
-            <span class="card-tag">Mechanical Design Studies</span>
-            <p class="cert-desc">Focused studies in parts, mechanisms, product design, and mechanical problem solving.</p>
-          </div>
-          <div class="cert-card reveal reveal-delay-1">
-            <span class="card-tag">Future Projects</span>
-            <p class="cert-desc">Additional portfolio work will be added as engineering coursework and personal projects are completed.</p>
+            <span class="card-tag">Design Process</span>
+            <p class="cert-desc">Sketches, iterations, fabrication notes, and lessons learned from future mechanical design projects.</p>
           </div>
         </div>
       </div>

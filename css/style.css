@@ -536,6 +536,19 @@ section { position: relative; z-index: 2; }
   font-size: 0.78rem;
 }
 .card:hover .card-link .btn-arrow { transform: translateX(3px); }
+.project-card-wide {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  align-items: stretch;
+}
+.project-card-wide .card-media {
+  min-height: 320px;
+  border-bottom: 0;
+  border-right: 1px solid var(--border);
+}
+.project-card-wide .card-body {
+  justify-content: center;
+}
 
 .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .tag-pill {
@@ -787,6 +800,16 @@ section { position: relative; z-index: 2; }
   overflow: hidden;
 }
 .project-hero-media img { width: 100%; height: 100%; object-fit: cover; }
+.project-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.project-feature .project-hero-media {
+  aspect-ratio: 5/4;
+  min-height: 420px;
+}
 .profile-photo {
   display: grid;
   place-items: center;
@@ -826,6 +849,11 @@ section { position: relative; z-index: 2; }
   object-fit: cover;
   background: var(--bg-raised);
 }
+.project-media-item.media-contain img {
+  object-fit: contain;
+  padding: 0.8rem;
+  background: #f6f4ef;
+}
 .project-media-item figcaption {
   padding: 0.9rem 1rem;
   color: var(--text-dim);
@@ -843,6 +871,15 @@ section { position: relative; z-index: 2; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
 @media (max-width: 860px) {
   .project-hero { grid-template-columns: 1fr; }
+  .project-feature,
+  .project-card-wide {
+    grid-template-columns: 1fr;
+  }
+  .project-card-wide .card-media {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
   .two-col { grid-template-columns: 1fr; gap: 1.5rem; }
   .about-split { grid-template-columns: 1fr; }
 }
@@ -922,6 +959,10 @@ section { position: relative; z-index: 2; }
   .project-media-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .project-feature .project-hero-media {
+    min-height: 0;
+    aspect-ratio: 4/3;
   }
   .card-body,
   .cert-card {
