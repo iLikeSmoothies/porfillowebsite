@@ -965,6 +965,10 @@ section { position: relative; z-index: 2; }
   padding: 0.8rem;
   background: #f6f4ef;
 }
+.town-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.town-gallery .image-zoom { height: auto; aspect-ratio: 4/3; }
+.town-gallery .image-zoom img { height: 100%; object-fit: contain; }
+@media (max-width: 600px) { .town-gallery { grid-template-columns: 1fr; } }
 .project-media-item figcaption {
   padding: 0.9rem 1rem;
   color: var(--text-dim);
